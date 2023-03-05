@@ -5,9 +5,7 @@ import {ReactQueryDevtools} from "@tanstack/react-query-devtools";
 import {RouterProvider} from "react-router-dom";
 import {httpBatchLink} from "@trpc/client";
 
-import {router} from "./routes";
-
-import {trpc} from "./utils/trpc";
+import {router, trpc} from "./utils";
 
 export function App() {
 	const [queryClient] = useState(() => new QueryClient());

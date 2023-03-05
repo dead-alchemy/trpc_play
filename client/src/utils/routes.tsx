@@ -1,4 +1,4 @@
-import Root from "./pages/Root";
+import Root from "../pages/Root";
 
 import {createBrowserRouter} from "react-router-dom";
 
