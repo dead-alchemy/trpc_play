@@ -9,7 +9,7 @@ export const greetingRouter = t.router({
 	hello: helloProcesure.query(({input}) => {
 		return {greeting: `Hello ${input || "world"}`};
 	}),
-	time: timeProcedure.query(({input}) => {
+	getTime: timeProcedure.query(({input}) => {
 		const time = new Date();
 		if (input) time.setHours(time.getHours() + input);
 
