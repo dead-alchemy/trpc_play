@@ -1,5 +1,7 @@
 import {useState} from "react";
 import {QueryClient, QueryClientProvider} from "@tanstack/react-query";
+import {ReactQueryDevtools} from "@tanstack/react-query-devtools";
+
 import {RouterProvider} from "react-router-dom";
 import {httpBatchLink} from "@trpc/client";
 
@@ -22,6 +24,7 @@ export function App() {
 		<trpc.Provider client={trpcClient} queryClient={queryClient}>
 			<QueryClientProvider client={queryClient}>
 				<RouterProvider router={router} />
+				<ReactQueryDevtools initialIsOpen={false} />
 			</QueryClientProvider>
 		</trpc.Provider>
 	);
