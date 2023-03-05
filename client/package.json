@@ -1,5 +1,5 @@
 {
-	"name": "trpc_play",
+	"name": "trpc_play-client",
 	"private": true,
 	"version": "10.14.0",
 	"type": "module",

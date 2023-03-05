@@ -10,7 +10,7 @@ export function App() {
 		trpc.createClient({
 			links: [
 				httpBatchLink({
-					url: "http://localhost:2022",
+					url: "http://localhost:8080/api",
 				}),
 			],
 		})
