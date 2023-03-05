@@ -6,7 +6,8 @@ const Root = () => {
 
 	return (
 		<div>
-			{data?.greeting} Current time: {timeData?.time}
+			<div>{data?.greeting}</div>
+			<div>Current time: {timeData?.time}</div>
 		</div>
 	);
 };
