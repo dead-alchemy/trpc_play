@@ -13,7 +13,7 @@ export const appRouter = t.router({
 			throw new Error("Invalid Input: Expected String");
 		})
 		.mutation((req) => {
-			console.log(`Client says ${req.input}`);
+			//console.log(`Client says ${req.input}`);
 			return true;
 		}),
 	users: userRouter,
