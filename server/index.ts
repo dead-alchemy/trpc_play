@@ -1,7 +1,12 @@
+import path from "path";
+require("dotenv").config({path: path.join(__dirname, "../.env")});
+
 import express from "express";
 import cors from "cors";
 
 import {createExpressMiddleware} from "@trpc/server/adapters/express";
+
+import {connectDB} from "./utils/connectDB";
 
 import {appRouter} from "./routers";
 
@@ -14,6 +19,12 @@ app.use(
 
 app.use("/api", createExpressMiddleware({router: appRouter}));
 
-app.listen(8080);
+const port = (process.env.SERVER_PORT as unknown as number) || 8080;
+
+app.listen(port, () => {
+	console.log(`🚀 Server listening on port ${port}`);
+	// CONNECT DB
+	connectDB();
+});
 
 export type AppRouter = typeof appRouter;
